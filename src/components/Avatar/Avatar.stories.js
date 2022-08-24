@@ -1,11 +1,11 @@
+import React from "react";
 import Avatar from ".";
 
 export default {
-	title: "Avatar",
-	component: Avatar,
-}
+  title: "Avatar",
+  component: Avatar,
+};
 
-// 导出story
-export const Default =  ()=>{
-	return <Avatar />
+export const Default  = () =>{
+  return <Avatar />
 }

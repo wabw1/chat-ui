@@ -11,12 +11,7 @@ export default {
   },
 };
 
-
-
 const Template = (args) => <Header {...args} />;
-
-
-
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
