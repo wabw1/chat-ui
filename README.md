@@ -2,6 +2,8 @@
 
 
 ## 目录结构
+```
+·
 ├── README.md
 ├── _templates
 │   ├── component
@@ -26,15 +28,18 @@
     ├── story.css
     ├── theme.js
     └── utils
-`jsconfig.json` 配置绝对路径 baseUrl
-`.storybook` 里配置全局主题，story.css引入
+```
+
+`jsconfig.json` 配置绝对路径 baseUrl \
+`.storybook` 里配置全局主题，story.css引入 \
 
 
 ## 技术点总结
+TBC......
 
 ### `hygen` 创建模板
-	- `hygen init self` 初始化
-	- `hygen component init xxx` 创建组件
+	- hygen init self 初始化
+	- hygen component init xxx 创建组件
 ### `FontAwesomeIcon` 矢量图直接import进来就是React组件	
 
 
