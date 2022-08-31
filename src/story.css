@@ -1,0 +1,12 @@
+/* 独立的storybook的 css */
+
+@import url(index.css);
+
+.row-elements {
+	display: flex;
+}
+
+/* 里面的子元素 */
+.row-elements > *{
+	margin: 8px;  
+}

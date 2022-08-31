@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import Avatar from './components/Avatar'
+import Icon from 'components/Icon';
+import Badge from 'components/Badge';
+
+
+import f1 from 'assets/images/face-female-1.jpg';
+import { ReactComponent as SmileIcon } from 'assets/icons/smile.svg';
+
+
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* <Avatar src={f1} size="48px" status="online" statusIconSize="8px" />
+      <Icon icon={SmileIcon} /> */}
+      <Badge count={0} showZero />
     </div>
   );
 }
