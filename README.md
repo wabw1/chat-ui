@@ -34,15 +34,15 @@
 `.storybook` 里配置全局主题，story.css引入 \
 
 
-## 技术点总结
-TBC......
-
-### `hygen` 创建模板
-	- hygen init self 初始化
-	- hygen component init xxx 创建组件
-### `FontAwesomeIcon` 矢量图直接import进来就是React组件	
 
 
+## Technique Points
+### `hygen 创建模板`
+hygen init self 初始化
+hygen component init xxx 创建组件
+
+### `FontAwesomeIcon` 
+矢量图import进来React组件	
 
 
 
@@ -68,7 +68,6 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 
 
 
