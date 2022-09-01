@@ -26,7 +26,7 @@ function Icon({
 
 // element为React组件
 Icon.propTypes = {
-	icon: PropTypes.element,
+	icon: PropTypes.any,
 	width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
 	height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
 	color: PropTypes.string,

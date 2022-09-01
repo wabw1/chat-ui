@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from ".";
 
 export default {
-	title: "UI 组件/Badge",
+	title: "UI组件/Badge",
 	component: Badge
 }
 

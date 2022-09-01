@@ -7,16 +7,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder, faStickyNote } from "@fortawesome/free-regular-svg-icons";
 
 export default {
-	title: "UI 组件/Icon",
+	title: "UI组件/Icon",
 	component: Icon
 }
 
 
-
+// 默认导出
 export const Default = () => {
 	return <Icon icon={SmileIcon} />
 }
 
+// 自定义导出
 export const CustomColor = () => {
 	return <Icon icon={SmileIcon} color="#cccccc" />
 }
@@ -31,6 +32,11 @@ export const FontAwesome = () => {
 export const FontAwesomeColorAttr = () => {
 	return <FontAwesomeIcon icon={faCommentDots} color="green" />
 }
+//无效修改，只能用style
+// export const FontAwesomeSizeAttr = () => {
+// 	return <FontAwesomeIcon icon={faCommentDots} height="48" width="48" />
+// }
+
 export const FontAwesomeColorStyle = () => {
 	return <FontAwesomeIcon icon={faCommentDots} style={{ color: "red" }} />
 }
