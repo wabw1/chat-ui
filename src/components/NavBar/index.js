@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import StyledNavBar, { MenuIcon, MenuItems, StyledMenuItem } from './style';    // 引入样式组件
 
@@ -34,6 +34,7 @@ function NavBar({ navSize, ...rest }) {
 function MenuItem({ icon, active, showBadge, ...rest }) {
 	return (
 		<StyledMenuItem active={active} {...rest}>
+			{/* eslint-disable-next-line  */}
 			<a href='#'>
 				<Badge show={showBadge}>
 					<MenuIcon icon={icon} active={active}  {...rest} />

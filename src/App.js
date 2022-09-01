@@ -1,12 +1,7 @@
 import './App.css';
 
-import Avatar from './components/Avatar'
-import Icon from 'components/Icon';
-import Badge from 'components/Badge';
 
-
-import f1 from 'assets/images/face-female-1.jpg';
-import { ReactComponent as SmileIcon } from 'assets/icons/smile.svg';
+// import { ReactComponent as SmileIcon } from 'assets/icons/smile.svg';
 import NavBar from 'components/NavBar';
 
 

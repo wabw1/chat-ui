@@ -18,3 +18,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 点击类标签 的边框去掉 */
+input,
+button,
+select{
+  outline: none;
+}

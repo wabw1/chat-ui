@@ -10,7 +10,7 @@ function Icon({
 	width = 24,
 	height = 24,
 	color,
-	opacity,
+	opacity = 0.5,
 	...rest
 }) {
 	return (
