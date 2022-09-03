@@ -1,11 +1,10 @@
-import Text from ".";  
+import Text from ".";
 
 export default {
-	title: "Text",
-	component: Text
-}
+  title: "Text",
+  component: Text,
+};
 
-
-export const Default = ()=>{
-	return <Text />
-}
+export const Default = () => {
+  return <Text type="danger">hello text</Text>;
+};
