@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import CaretDown from "assets/icons/caret_down.svg";
+// import StyledOption from "components/Option/style";
 
 const StyledSelect = styled.select`
   appearance: none; //   -moz-appearance, -webkit-appearance: 两个分别隐藏firefox/chrome
@@ -18,5 +19,10 @@ const StyledSelect = styled.select`
   ${({ theme }) => `color: ${theme.greyInput}`}; //两种写法都对
   font-size: ${({ theme }) => theme.normal};
 `;
+
+//修改下面的Option的样式 改不了option样式。
+/* ${StyledOption} {
+  background-color: red;
+} */
 
 export default StyledSelect;

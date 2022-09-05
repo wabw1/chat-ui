@@ -3,7 +3,7 @@ import Button from ".";
 import { ReactComponent as Plus } from "assets/icons/plus.svg"; //引入svg为React组件
 
 export default {
-  title: "Button",
+  title: "UI组件/Button",
   component: Button,
 };
 

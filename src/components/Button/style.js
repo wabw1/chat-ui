@@ -39,7 +39,7 @@ const StyledButton = styled.button`
   transition: 0.4s;
   &:hover {
     transform: scale(1.1);
-    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
   }
 `;
 
