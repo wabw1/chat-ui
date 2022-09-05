@@ -7,7 +7,7 @@ const theme = {
   darkPurple: "#292F4C",
   greyBg: "rgba(241,237,237, 0.3)",
   greyPh: "rgba(24,28,47, 0.3)",
-  greyInput: "#181C2F",
+  greyInput: "#181C2F", // greyDark
 
   normal: "1.4rem",
   medium: "1.6rem",
