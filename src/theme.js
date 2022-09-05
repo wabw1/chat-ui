@@ -18,6 +18,10 @@ const theme = {
   small: "1.2rem",
   xsmall: "1rem",
   xxsmall: "0.8rem",
+
+  background: "white",
+  inactiveColor: "rgba(41,47,76,0.3)",
+  inactiveColorDark: "white",
 };
 
 export default theme;
