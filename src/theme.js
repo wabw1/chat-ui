@@ -22,6 +22,8 @@ const theme = {
   background: "white",
   inactiveColor: "rgba(41,47,76,0.3)",
   inactiveColorDark: "white",
+
+  greyBox: "#EFECE8",
 };
 
 export default theme;

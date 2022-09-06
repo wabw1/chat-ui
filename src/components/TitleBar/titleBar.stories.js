@@ -1,11 +1,14 @@
-import TitleBar from ".";  
+import TitleBar from ".";
 
 export default {
-	title: "TitleBar",
-	component: TitleBar
-}
+  title: "UI组件/TitleBar",
+  component: TitleBar,
+};
 
+export const Default = () => {
+  return <TitleBar />;
+};
 
-export const Default = ()=>{
-	return <TitleBar > </TitleBar>
-}
+export const Online = () => {
+  return <TitleBar status="online" />;
+};
