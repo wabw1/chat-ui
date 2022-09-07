@@ -1,5 +1,6 @@
 import ChatBubble from ".";
 import VoiceMessage from "components/VoiceMessage";
+import Emoji from "components/Emoji";
 
 export default {
   title: "UI组件/ChatBubble",
@@ -31,6 +32,15 @@ export const VoiceFromMine = () => {
   return (
     <ChatBubble time="昨天 下午14:04" type="mine">
       <VoiceMessage time="02:12" type="mine" />
+    </ChatBubble>
+  );
+};
+
+// emoji使用
+export const VoiceWithEmoji = () => {
+  return (
+    <ChatBubble time="昨天 下午14:04" type="mine">
+      一条带自定义emoji的：<Emoji label="smile">🙂</Emoji>
     </ChatBubble>
   );
 };

@@ -1,9 +1,5 @@
-import styled,{css} from 'styled-components';
+import styled, { css } from "styled-components";
 
-
-const StyledEmoji = styled.div``;
+const StyledEmoji = styled.span``;
 
 export default StyledEmoji;
-
-
-
