@@ -28,7 +28,7 @@ const StyledConversation = styled.div`
   & > *:last-child {
     align-self: end;
   }
-  border: 1px solid ${({ theme }) => theme.greyInput};
+  border: 1px solid ${({ theme }) => theme.greyBox};
 `;
 
 export default StyledConversation;

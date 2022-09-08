@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import StyledIcon from "./style";
+import SocialIcon from "./SocialIcon"; //导进来SocialIcon 作为子组件
 
 // 传进来的svg文件，命名为icon, 是个组件
 function Icon({
@@ -19,9 +20,12 @@ function Icon({
   );
 }
 
-// element为React组件
+// SocialIcon作为Icon的子组件导出
+Icon.Social = SocialIcon;
+
+// elementType为React组件
 Icon.propTypes = {
-  icon: PropTypes.any,
+  icon: PropTypes.elementType,
   width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,

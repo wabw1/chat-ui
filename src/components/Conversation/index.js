@@ -14,13 +14,13 @@ function Conversation({ ...rest }) {
       <TitleBar />
       <Conversations>
         <ChatBubble time="下午10:00">Hi, Bob, what r u doing?</ChatBubble>
-        <MyChatBubble time="下午10:10">Watching figurskating...</MyChatBubble>
+        <MyChatBubble time="下午10:10">Set todos for the summer.</MyChatBubble>
         <ChatBubble time="下午10:20">
           <VoiceMessage time="00:21" />
         </ChatBubble>
         <MyChatBubble time="下午10:30">
-          Team China
-          <Emoji label="china">🇨🇳</Emoji>
+          Cool!
+          <Emoji label="cool"> 😎</Emoji>
         </MyChatBubble>
       </Conversations>
       <Footer />
