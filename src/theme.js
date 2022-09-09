@@ -26,6 +26,7 @@ const theme = {
   inactiveColorDark: "white",
 
   greyBox: "#EFECE8", //grey4
+  grey5: "#D8D8D8", // placeholder
 };
 
 export default theme;
