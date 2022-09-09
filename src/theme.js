@@ -27,6 +27,12 @@ const theme = {
 
   greyBox: "#EFECE8", //grey4
   grey5: "#D8D8D8", // placeholder
+
+  //green
+  green1: "#217756",
+  green2: "#63B75D",
+  green3: "#B0D553",
+  green4: "#FCED25",
 };
 
 export default theme;
