@@ -6,7 +6,7 @@ export default {
 };
 
 export const Default = () => {
-  return <Radio>选项 </Radio>; //只有一个可以不传name
+  return <Radio>单个Radio </Radio>; //只有一个可以不传name
 };
 
 //多个单选

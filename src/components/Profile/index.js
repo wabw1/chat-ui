@@ -33,21 +33,48 @@ import p1 from "assets/images/photo1.jpg";
 import p2 from "assets/images/photo2.jpg";
 import p3 from "assets/images/photo3.jpg";
 import p4 from "assets/images/photo4.jpg";
+import Button from "components/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
 
-function Profile({ ...rest }) {
+function Profile({
+  showEditBtn,
+  showCloseIcon = true,
+  onEdit,
+  status,
+  ...rest
+}) {
   return (
     <StyledProfile {...rest}>
-      <CloseIcon icon={Cross} />
+      {showCloseIcon && <CloseIcon icon={Cross} />}
 
       <Avatar
         src={face}
         size="160px"
-        status="online"
+        status={status}
         statusIconSize="25px"
         css={`
           margin: 26px 0;
+          grid-area: 1 / 1 / 3 / 2; // 两行一列
         `}
       />
+
+      {/* 编辑按钮 设置点击回调onEdit */}
+      {showEditBtn && (
+        <Button
+          size="52px"
+          onClick={onEdit}
+          css={`
+            grid-area: 1 / 1 / 3 / 2; // 两行一列
+            margin-left: 100px;
+            align-self: end;
+            z-index: 10;
+          `}
+        >
+          <FontAwesomeIcon icon={faPen} fontSize="24px" />
+        </Button>
+      )}
+
       <Paragraph
         size="xlarge"
         css={`
