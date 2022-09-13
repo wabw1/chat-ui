@@ -51,4 +51,10 @@ export const card = (radius = "6px", padding = "20px 30px") => css`
   box-shadow: 0px 18px 40px 0 rgba(0, 0, 0, 0.05); //阴影
   padding: ${padding};
   border-radius: ${radius};
+  &:hover {
+    box-shadow: 0px 18px 40px 0 rgba(0, 0, 0, 0.2); //阴影
+    /* background: ${({ theme }) => theme.primaryColor};
+    opacity: 0.2; */
+  }
+  transition: 0.4s;
 `;

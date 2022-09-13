@@ -69,3 +69,4 @@ Footer.propTypes = {
 };
 
 export default Footer;
+export { PopoverContent }; // 导出方便复用

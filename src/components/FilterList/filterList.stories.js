@@ -1,7 +1,7 @@
 import FilterList from ".";
 
 export default {
-  title: "FilterList",
+  title: "页面组件/FilterList",
   component: FilterList,
 };
 
