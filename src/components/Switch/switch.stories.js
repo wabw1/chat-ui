@@ -9,6 +9,7 @@ export const Default = () => {
   return (
     <div style={{ padding: "1vw" }}>
       <Switch />
+      <Switch />
     </div>
   );
 };

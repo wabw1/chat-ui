@@ -12,8 +12,12 @@ import Avatar from "components/Avatar";
 import Paragraph from "components/Paragraph";
 import Text from "components/Text";
 import Icon from "components/Icon";
+import { useTheme } from "styled-components";
 
 function TitleBar({ status = "offline", ...rest }) {
+  // 使用主题里的颜色
+  const theme = useTheme();
+
   return (
     <StyledTitleBar {...rest}>
       <Avatar src={face} status={status} />
@@ -32,7 +36,17 @@ function TitleBar({ status = "offline", ...rest }) {
         )}
       </Title>
       <Actions>
-        <Icon icon={Call} opacity={0.5} />
+        <Icon
+          icon={Call}
+          opacity={0.5}
+          css={`
+            &:hover {
+              /* path { */
+              fill: ${({ theme }) => theme.primaryColor};
+              /* } */
+            }
+          `}
+        />
         <Icon icon={Camera} opacity={0.5} />
         <Icon icon={Options} opacity={0.5} />
       </Actions>

@@ -1,11 +1,10 @@
-import BlockedList from ".";  
+import BlockedList from ".";
 
 export default {
-	title: "BlockedList",
-	component: BlockedList
-}
+  title: "页面组件/BlockedList",
+  component: BlockedList,
+};
 
-
-export const Default = ()=>{
-	return <BlockedList > </BlockedList>
-}
+export const Default = () => {
+  return <BlockedList />;
+};

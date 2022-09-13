@@ -41,7 +41,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })`
   left: 100px;
   // 伪类checked,当它被选中的时候，设置邻居Slider的样式 （背景色改变，::before位移右移20px)
   &:checked + ${Slider} {
-    background-color: ${({ theme }) => theme.green2};
+    background-color: ${({ theme }) => theme.primaryColor};
     // 原型右移
     &::before {
       transform: translateX(20px);
