@@ -1,20 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import StyledContactCard from './style';   
+import StyledContactCard, { Intro, Name } from "./style";
+import Avatar from "components/Avatar";
 
-
-function ContactCard({children, ...rest}) {
-	return (
-		<StyledContactCard {...rest}>
-			{children}
-		</StyledContactCard>
-	)
+function ContactCard({ children, avatarSrc, status, name, intro, ...rest }) {
+  return (
+    <StyledContactCard {...rest}>
+      <Avatar src={avatarSrc} status={status} />
+      <Name>{name}</Name>
+      <Intro>{intro}</Intro>
+      {children}
+    </StyledContactCard>
+  );
 }
-
 
 ContactCard.propTypes = {
-	children: PropTypes.any
-}
+  children: PropTypes.any,
+};
 
-export default ContactCard
+export default ContactCard;

@@ -21,7 +21,7 @@ Filter.Filters = ({ children, label, ...rest }) => {
 Filter.Action = ({ children, label, ...rest }) => {
   return (
     <Action {...rest}>
-      <Text type="secondary">{label}</Text>
+      <Text type="secondary">{label}: </Text>
       {children}
     </Action>
   );
