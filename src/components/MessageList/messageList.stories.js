@@ -1,4 +1,4 @@
-import MessageList from ".";
+import MessageList, { MessageList1 } from ".";
 
 export default {
   title: "页面组件/MessageList",
@@ -8,3 +8,7 @@ export default {
 export const Default = () => {
   return <MessageList />;
 };
+
+// export const UseFilterList = () => {
+//   return <MessageList1 />;
+// };
