@@ -12,12 +12,29 @@ import Avatar from "components/Avatar";
 import Paragraph from "components/Paragraph";
 import Text from "components/Text";
 import Icon from "components/Icon";
-import { useTheme } from "styled-components";
+// import { useTheme } from "styled-components";
+import Dropdown from "components/Dropdown";
+import { DropdownItem } from "components/Dropdown/style";
+import Seperator from "components/Seperator";
+// 定义一个dropdownContent
+const Content = (
+  <>
+    <DropdownItem>
+      <Paragraph>个人资料</Paragraph>
+    </DropdownItem>
+    <DropdownItem>
+      <Paragraph>关闭会话</Paragraph>
+    </DropdownItem>
+    <Seperator />
+    <DropdownItem>
+      <Paragraph type="danger">屏蔽此人</Paragraph>
+    </DropdownItem>
+  </>
+);
 
 function TitleBar({ status = "offline", ...rest }) {
   // 使用主题里的颜色
-  const theme = useTheme();
-
+  // const theme = useTheme();
   return (
     <StyledTitleBar {...rest}>
       <Avatar src={face} status={status} />
@@ -36,19 +53,11 @@ function TitleBar({ status = "offline", ...rest }) {
         )}
       </Title>
       <Actions>
-        <Icon
-          icon={Call}
-          opacity={0.5}
-          css={`
-            &:hover {
-              /* path { */
-              fill: ${({ theme }) => theme.primaryColor};
-              /* } */
-            }
-          `}
-        />
+        <Icon icon={Call} opacity={0.5} />
         <Icon icon={Camera} opacity={0.5} />
-        <Icon icon={Options} opacity={0.5} />
+        <Dropdown content={Content}>
+          <Icon icon={Options} opacity={0.5} />
+        </Dropdown>
       </Actions>
     </StyledTitleBar>
   );

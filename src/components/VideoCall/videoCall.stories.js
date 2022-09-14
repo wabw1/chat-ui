@@ -1,7 +1,7 @@
 import VideoCall from ".";
 
 export default {
-  title: "VideoCall",
+  title: "页面组件/VideoCall",
   component: VideoCall,
 };
 
