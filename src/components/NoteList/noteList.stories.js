@@ -1,11 +1,10 @@
-import NoteList from ".";  
+import NoteList from ".";
 
 export default {
-	title: "NoteList",
-	component: NoteList
-}
+  title: "页面组件/NoteList",
+  component: NoteList,
+};
 
-
-export const Default = ()=>{
-	return <NoteList > </NoteList>
-}
+export const Default = () => {
+  return <NoteList> </NoteList>;
+};

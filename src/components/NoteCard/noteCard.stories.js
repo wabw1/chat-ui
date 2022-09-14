@@ -3,7 +3,7 @@ import NoteCard from ".";
 import p from "assets/images/photo1.jpg";
 
 export default {
-  title: "NoteCard",
+  title: "UI组件/NoteCard",
   component: NoteCard,
 };
 

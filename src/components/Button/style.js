@@ -13,6 +13,8 @@ const shapeVariants = {
   rect: css`
     padding: 12px 18px;
     border-radius: 6px;
+    width: ${({ size }) => size};
+    height: ${({ size }) => size};
   `,
 };
 

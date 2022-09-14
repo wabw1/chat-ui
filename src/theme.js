@@ -5,11 +5,13 @@ const theme = {
   green: "#34D859",
   grey: "rgba(24,28,47,0.2)",
   red: "#F34848",
+  red2: "rgba(236,90,81,0.8)",
 
   darkPurple: "#292F4C",
   greyBg: "rgba(241,237,237, 0.3)",
   greyPh: "rgba(24,28,47, 0.3)",
   greyInput: "#181C2F", // greyDark
+  greyDark2: "rgba(33,33,33,0.58)",
 
   xxsmall: "0.8rem",
   xsmall: "1rem",

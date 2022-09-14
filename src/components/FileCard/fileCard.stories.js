@@ -1,7 +1,7 @@
 import FileCard from ".";
 
 export default {
-  title: "FileCard",
+  title: "UI组件/FileCard",
   component: FileCard,
 };
 
