@@ -1,5 +1,5 @@
 import ChatBubble from "components/ChatBubble";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 // 自定义conversations容器
 const Conversations = styled.div`

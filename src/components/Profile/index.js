@@ -32,7 +32,6 @@ import face from "assets/images/face-female-2.jpg"; //引入头像
 import p1 from "assets/images/photo1.jpg";
 import p2 from "assets/images/photo2.jpg";
 import p3 from "assets/images/photo3.jpg";
-import p4 from "assets/images/photo4.jpg";
 import Button from "components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
@@ -133,7 +132,7 @@ function Profile({
       <AlbumSection>
         <AlbumTitle>
           <Text type="secondary">相册(31)</Text>
-          <a href="#">查看全部</a>
+          <a href="www.baidu.com">查看全部</a>
         </AlbumTitle>
         <Album>
           <Photo src={p1} alt="" />

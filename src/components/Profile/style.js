@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import ArrowRight from "assets/icons/arrowRight.svg"; //是个url
 import Icon from "components/Icon";
@@ -81,7 +81,8 @@ const StyledProfile = styled.div`
   padding: 30px;
   height: 100vh;
   overflow-y: auto;
-  margin-top: 2vh;
+  overflow-x: hidden;
+  /* margin-top: 2vh; */
 `;
 
 export default StyledProfile;

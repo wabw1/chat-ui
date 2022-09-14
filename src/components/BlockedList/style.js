@@ -2,7 +2,7 @@ import Avatar from "components/Avatar";
 import Icon from "components/Icon";
 import Text from "components/Text";
 import StyledText from "components/Text/style";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const BlockedAvatar = styled(Avatar)`
   grid-area: av;

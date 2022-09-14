@@ -1,6 +1,6 @@
 import StyledAvatar from "components/Avatar/style";
 import Paragraph from "components/Paragraph";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { card } from "utils/mixins";
 
 // 自定义样式

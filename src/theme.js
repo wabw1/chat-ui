@@ -1,6 +1,6 @@
 const theme = {
-  // primaryColor: "#4F9DDE",
-  primaryColor: "#7CB855", // 绿色
+  primaryColor: "#4F9DDE",
+  // primaryColor: "#7CB855", // 绿色
 
   green: "#34D859",
   grey: "rgba(24,28,47,0.2)",
@@ -36,6 +36,10 @@ const theme = {
   green2: "#63B75D",
   green3: "#B0D553",
   green4: "#FCED25",
+
+  //渐变色
+  gradientGrey:
+    "linear-gradient(119.19deg, #FFFFFF 0%, #F8F8F8 65.34%, #FFFFFF 100%)",
 };
 
 export default theme;

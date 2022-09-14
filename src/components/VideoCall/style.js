@@ -3,7 +3,7 @@ import Avatar from "components/Avatar";
 import StyledAvatar from "components/Avatar/style";
 import Button from "components/Button";
 import StyledParagraph from "components/Paragraph/style";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { card } from "utils/mixins";
 
 // 底部按钮div

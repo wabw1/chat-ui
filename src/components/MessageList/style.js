@@ -8,7 +8,9 @@ const ChatList = styled.div`
   }
 `;
 
-const StyledMessageList = styled.div``;
+const StyledMessageList = styled.div`
+  overflow-y: auto;
+`;
 
 export default StyledMessageList;
 export { ChatList };

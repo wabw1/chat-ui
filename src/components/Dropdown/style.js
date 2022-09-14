@@ -1,5 +1,5 @@
 import StyledSeperator from "components/Seperator/style";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const DropdownItem = styled.div`
   margin: 12px 0;

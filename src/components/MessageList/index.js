@@ -2,15 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import StyledMessageList, { ChatList } from "./style";
-import Filter from "components/Filter";
-import Select from "components/Select";
-import Option from "components/Option";
-import Button from "components/Button";
-import Icon from "components/Icon";
-import Input from "components/Input";
+// import Filter from "components/Filter";
+// import Select from "components/Select";
+// import Option from "components/Option";
+// import Button from "components/Button";
+// import Icon from "components/Icon";
+// import Input from "components/Input";
 import MessageCard from "components/MessageCard";
-
-import { ReactComponent as Plus } from "assets/icons/plus.svg";
 
 import face2 from "assets/images/face-female-1.jpg";
 

@@ -2,7 +2,7 @@ import Heading from "components/Heading";
 import Icon from "components/Icon";
 import Paragraph from "components/Paragraph";
 import Popover from "components/Popover";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { card } from "utils/mixins";
 
 // 自定义
