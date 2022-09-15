@@ -11,7 +11,7 @@ const FileIcon = styled(Icon)`
   height: 60; //svg没有单位
   grid-area: icon;
 `;
-const FileName = styled(Heading).attrs({ level: "2" })`
+const FileName = styled(Heading).attrs({ level: 2 })`
   grid-area: name;
   align-items: center;
 `;

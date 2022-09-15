@@ -26,7 +26,7 @@ function SocialIcon({ icon, bgColor, href, ...rest }) {
 }
 
 SocialIcon.propTypes = {
-  icon: PropTypes.elementType,
+  icon: PropTypes.any,
   bgColor: PropTypes.string,
   href: PropTypes.string,
 };

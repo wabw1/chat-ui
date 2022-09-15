@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 // nav标签渲染
 const Nav = styled.nav`
@@ -12,7 +12,7 @@ const SideBar = styled.aside`
   flex: 1;
   background: ${({ theme }) => theme.gradientGrey};
   padding: 10px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 `;
 
 const Content = styled.main`
@@ -22,6 +22,12 @@ const Content = styled.main`
 
 const Drawer = styled.div`
   max-width: 310px;
+  width: 0; //默认为0 ，show==true为320
+  ${({ show }) =>
+    show &&
+    css`
+      width: 310px;
+    `}
 `;
 
 const StyledChatApp = styled.div`

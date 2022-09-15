@@ -33,7 +33,6 @@ import {
 function EditProfile({ children, ...rest }) {
   // 设置一个状态：是否显示editBtn
   const [isEdit, setIsEdit] = useState(false); //默认非编辑状态
-  console.log(isEdit);
 
   // 非编辑状态 = 默认状态（显示EditBtn, 不显示closeIcon)
   if (!isEdit)

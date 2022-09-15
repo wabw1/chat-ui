@@ -19,9 +19,12 @@ import Text from "components/Text";
 import Icon from "components/Icon";
 
 import face from "assets/images/face-female-1.jpg";
+import { useNavigate } from "react-router-dom"; //代替useHistory
 
 // 页面组件（组装的）一般都没有children
 function BlockedList({ ...rest }) {
+  // 编程式控制路由
+  const navigate = useNavigate(); //
   return (
     <StyledBlockedList {...rest}>
       <SettingsMenu>
@@ -30,6 +33,7 @@ function BlockedList({ ...rest }) {
           css={`
             cursor: pointer;
           `}
+          onClick={() => navigate(-1)}
         />
         <Text size="xxlarge">已屏蔽的好友</Text>
       </SettingsMenu>

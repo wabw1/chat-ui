@@ -6,7 +6,7 @@ import StyledSettings, {
   StyledSettingsGroup,
   StyledSettingsItem,
 } from "./style";
-import Text from "components/Text";
+
 import Switch from "components/Switch";
 import Icon from "components/Icon";
 
@@ -14,6 +14,9 @@ import Icon from "components/Icon";
 import { ReactComponent as ArrowMenuRight } from "assets/icons/arrowMenuRight.svg";
 import Paragraph from "components/Paragraph";
 import Seperator from "components/Seperator";
+import { Link } from "react-router-dom";
+
+import "styled-components/macro";
 
 function Settings({ ...rest }) {
   return (
@@ -31,7 +34,15 @@ function Settings({ ...rest }) {
         <SettingsItem label="语音提醒" />
         <SettingsItem label="通知详情" />
         <SettingsItem label="声音" />
-        <SettingsItem label="显示mute的好友" type="menu" />
+        <Link
+          to="/settings/blocked"
+          css={`
+            text-decoration: none;
+            color: inherit;
+          `}
+        >
+          <SettingsItem label="显示mute的好友" type="menu" />
+        </Link>
       </SettingsGroup>
     </StyledSettings>
   );

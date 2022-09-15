@@ -69,9 +69,9 @@ const CloseIcon = styled(Icon).attrs({ opacity: 0.3 })`
 // 最外层容器
 const StyledProfile = styled.div`
   border: 1px solid ${({ theme }) => theme.greyBox};
-  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2); */
 
-  display: grid;
+  display: ${({ showAll }) => (showAll ? "grid" : "none")};
   align-content: start;
   justify-content: center;
   justify-items: center;

@@ -25,6 +25,7 @@ export const activeBar = ({
     position: absolute;
     left: 0;
     height: 100%;
+    transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); //高度条过渡 自定义动画
   }
   &::before {
     width: ${barWidth}; //传进来的宽度

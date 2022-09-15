@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import StyledProfile, {
@@ -28,7 +28,7 @@ import Seperator from "components/Seperator";
 import Text from "components/Text";
 
 //导入images
-import face from "assets/images/face-female-2.jpg"; //引入头像
+import face from "assets/images/face-female-1.jpg"; //引入头像
 import p1 from "assets/images/photo1.jpg";
 import p2 from "assets/images/photo2.jpg";
 import p3 from "assets/images/photo3.jpg";
@@ -36,16 +36,25 @@ import Button from "components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 
+import "styled-components/macro";
+
+// 添加 showAll 参数，决定是否显示整个Profile
 function Profile({
   showEditBtn,
   showCloseIcon = true,
   onEdit,
   status,
+  showProfile = true,
   ...rest
 }) {
+  // 控制是否显示的状态
+  const [show, setShow] = useState(showProfile);
+
   return (
-    <StyledProfile {...rest}>
-      {showCloseIcon && <CloseIcon icon={Cross} />}
+    <StyledProfile {...rest} showAll={show}>
+      {showCloseIcon && (
+        <CloseIcon icon={Cross} onClick={() => setShow(false)} />
+      )}
 
       <Avatar
         src={face}

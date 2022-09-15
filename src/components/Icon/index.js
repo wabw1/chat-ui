@@ -26,8 +26,8 @@ Icon.Social = SocialIcon;
 // elementType为React组件
 Icon.propTypes = {
   icon: PropTypes.elementType,
-  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]), //一定是oneOfType
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
   opacity: PropTypes.number,
 };

@@ -5,7 +5,7 @@ import StyledContactList, { Contacts } from "./style";
 import FilterList from "components/FilterList";
 import ContactCard from "components/ContactCard";
 
-import face from "assets/images/face-female-4.jpg";
+import face from "assets/images/face-female-2.jpg";
 
 function ContactList({ ...rest }) {
   return (
@@ -21,7 +21,7 @@ function ContactList({ ...rest }) {
               key={id}
               avatarSrc={face}
               status="online"
-              name={`Name ${id}`}
+              name={`联系人 ${id}`}
               intro="this is the introduction"
             />
           ))}

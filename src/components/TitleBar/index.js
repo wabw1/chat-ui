@@ -32,12 +32,12 @@ const Content = (
   </>
 );
 
-function TitleBar({ status = "offline", ...rest }) {
+function TitleBar({ onAvatarClick, status = "offline", ...rest }) {
   // 使用主题里的颜色
   // const theme = useTheme();
   return (
     <StyledTitleBar {...rest}>
-      <Avatar src={face} status={status} />
+      <Avatar onClick={onAvatarClick} src={face} status={status} />
       <Title>
         <Paragraph size="large">Guile</Paragraph>
         {status === "offline" ? (

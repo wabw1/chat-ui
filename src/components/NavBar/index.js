@@ -18,17 +18,24 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 
+// 导入路由相关模块  使用NavLink替代Link
+import { matchPath, Link, useLocation } from "react-router-dom";
+
+// import css/macro
+import "styled-components/macro";
+
 function NavBar({ navSize = "75px", ...rest }) {
   return (
     <StyledNavBar navSize={navSize} {...rest}>
       <Avatar src={profileImage} status="online" />
       <MenuItems>
-        <MenuItem icon={faCommentDots} active showBadge />
-        <MenuItem icon={faUsers} />
-        <MenuItem icon={faFolder} />
-        <MenuItem icon={faStickyNote} />
+        <MenuItem to="/" icon={faCommentDots} showBadge={true} />
+        <MenuItem to="/contacts" icon={faUsers} />
+        <MenuItem to="/files" icon={faFolder} />
+        <MenuItem to="/notes" icon={faStickyNote} />
         <MenuItem icon={faEllipsisH} />
         <MenuItem
+          to="/settings"
           icon={faCog}
           css={`
             align-self: end;
@@ -40,22 +47,35 @@ function NavBar({ navSize = "75px", ...rest }) {
 }
 
 // 里面的MenuItem组件
-// icon:svg, active:是否激活, showBadge:是否显示红点
-function MenuItem({ icon, active, showBadge, ...rest }) {
+// icon:svg, active:是否激活, showBadge:
+// 添加to参数，使用路由
+// 这里使用match的结果(bool) 来控制active， 仍然作为props传给样式组件，但不需要作为参数存在MenuItem里
+function MenuItem({ to = "#", icon, showBadge, ...rest }) {
+  const loc = useLocation(); //获取当前浏览器的loc对象，loc.pathname为路径
+  const curpath = loc.pathname;
+  let active = !!matchPath(
+    {
+      path: to,
+      end: true,
+    },
+    curpath
+  );
+  // styled-components里 传递属性如果不是参数的话, 前面需要加 $
   return (
-    <StyledMenuItem active={active} {...rest}>
+    <StyledMenuItem $active={active} {...rest}>
       {/* eslint-disable-next-line  */}
-      <a href="#">
+      <Link to={to}>
         <Badge show={showBadge}>
-          <MenuIcon icon={icon} active={active} {...rest} />
+          <MenuIcon icon={icon} $active={active} {...rest} />
         </Badge>
-      </a>
+      </Link>
     </StyledMenuItem>
   );
 }
 
 NavBar.propTypes = {
   navSize: PropTypes.string,
+  icon: PropTypes.any,
 };
 
 export default NavBar;

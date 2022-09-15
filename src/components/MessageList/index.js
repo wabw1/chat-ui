@@ -10,7 +10,7 @@ import StyledMessageList, { ChatList } from "./style";
 // import Input from "components/Input";
 import MessageCard from "components/MessageCard";
 
-import face2 from "assets/images/face-female-1.jpg";
+import face1 from "assets/images/face-female-1.jpg";
 
 import FilterList from "components/FilterList";
 
@@ -71,7 +71,7 @@ function MessageList({ ...rest }) {
         {[1, 2, 3, 4, 5, 6].map((val, idx) => (
           <MessageCard
             key={idx}
-            avatarSrc={face2}
+            avatarSrc={face1}
             avatarStatus="online"
             name="Cindy"
             statusText="在线"
