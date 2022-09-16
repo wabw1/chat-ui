@@ -22,7 +22,7 @@ const Content = styled.main`
 
 const Drawer = styled.div`
   max-width: 310px;
-  width: 0; //默认为0 ，show==true为320
+  width: 0; //默认为0 ，show==true为310
   ${({ show }) =>
     show &&
     css`

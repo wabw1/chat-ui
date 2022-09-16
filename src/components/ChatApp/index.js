@@ -17,10 +17,14 @@ import NoteList from "components/NoteList";
 import EditProfile from "components/EditProfile";
 import BlockedList from "components/BlockedList";
 import Settings from "components/Settings";
+import VideoCall from "components/VideoCall";
 
 function ChatApp({ ...rest }) {
   // 控制滑动抽屉是否显示
   const [showDrawer, setShowDrawer] = useState(false);
+  // 控制视频通话是否显示
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <StyledChatApp {...rest}>
       <Nav>
@@ -36,24 +40,33 @@ function ChatApp({ ...rest }) {
           <Route path="/files" element={<FileList />} />
           <Route path="/notes" element={<NoteList />} />
           <Route path="/more" element={<div></div>} /> {/*  这里先整个空白 */}
-          <Route path="/settings" element={<EditProfile />} />
+          <Route path="/settings/*" element={<EditProfile />} />
         </Routes>
       </SideBar>
 
       <Content>
+        {/* 显示Video或者其他content二选一 */}
+        {showVideo && <VideoCall onHangOffClick={() => setShowVideo(false)} />}
         <Routes>
           {/* 给Conversation设置回调，一路传下去到Avatar组件 */}
           <Route
-            path="/"
-            element={<Conversation onAvatarClick={() => setShowDrawer(true)} />}
+            path="/*"
+            // exact={false}
+            element={
+              <Conversation
+                onAvatarClick={() => setShowDrawer(true)}
+                onVideoClick={() => setShowVideo(true)}
+              />
+            }
           />
           <Route path="/settings" element={<Settings />} />
           <Route path="settings/blocked" element={<BlockedList />} />
         </Routes>
       </Content>
+
       {/* 给Drawer添加一个show属性 showDrawer传进去 */}
       <Drawer show={showDrawer}>
-        <Profile />
+        <Profile onCloseClick={() => setShowDrawer(false)} />
       </Drawer>
     </StyledChatApp>
   );

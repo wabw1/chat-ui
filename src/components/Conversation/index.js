@@ -8,11 +8,11 @@ import ChatBubble from "components/ChatBubble";
 import Emoji from "components/Emoji";
 import VoiceMessage from "components/VoiceMessage";
 
-function Conversation({ onAvatarClick, ...rest }) {
+function Conversation({ onAvatarClick, onVideoClick, ...rest }) {
   return (
     <StyledConversation {...rest}>
       {/* 继续传给TitleBar */}
-      <TitleBar onAvatarClick={onAvatarClick} />
+      <TitleBar onAvatarClick={onAvatarClick} onVideoClick={onVideoClick} />
       <Conversations>
         <ChatBubble time="下午10:00">Hi, Bob, what r u doing?</ChatBubble>
         <MyChatBubble time="下午10:10">Set todos for the summer.</MyChatBubble>

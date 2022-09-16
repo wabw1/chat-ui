@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Avatar from "components/Avatar";
 import StyledAvatar from "components/Avatar/style";
 import Button from "components/Button";
-import StyledParagraph from "components/Paragraph/style";
+// import StyledParagraph from "components/Paragraph/style";
 import styled from "styled-components";
 import { card } from "utils/mixins";
 

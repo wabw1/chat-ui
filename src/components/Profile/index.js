@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import StyledProfile, {
@@ -40,21 +40,19 @@ import "styled-components/macro";
 
 // 添加 showAll 参数，决定是否显示整个Profile
 function Profile({
+  onCloseClick,
   showEditBtn,
   showCloseIcon = true,
   onEdit,
   status,
-  showProfile = true,
   ...rest
 }) {
-  // 控制是否显示的状态
-  const [show, setShow] = useState(showProfile);
+  // 控制是否显示的状态 (这种方法只能关闭，一次性)
+  // const [show, setShow] = useState(showProfile);
 
   return (
-    <StyledProfile {...rest} showAll={show}>
-      {showCloseIcon && (
-        <CloseIcon icon={Cross} onClick={() => setShow(false)} />
-      )}
+    <StyledProfile {...rest}>
+      {showCloseIcon && <CloseIcon icon={Cross} onClick={onCloseClick} />}
 
       <Avatar
         src={face}

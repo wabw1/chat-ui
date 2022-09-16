@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 import StyledVideoCall, { Action, Actions, Minimise, Self } from "./style";
 // 导入小窗口的样式组件
@@ -22,7 +22,7 @@ import Paragraph from "components/Paragraph";
 //使用css
 import "styled-components/macro";
 
-function VideoCall({ ...rest }) {
+function VideoCall({ onHangOffClick, ...rest }) {
   // 定义是悬浮窗还是最大化窗口
   const [fullScreen, setFullScreen] = useState(true); //默认全屏
   if (fullScreen) {
@@ -36,7 +36,7 @@ function VideoCall({ ...rest }) {
           <Action>
             <FontAwesomeIcon icon={faMicrophone} />
           </Action>
-          <Action type="hangoff">
+          <Action type="hangoff" onClick={onHangOffClick}>
             <FontAwesomeIcon icon={faPhoneSlash} />
           </Action>
           <Action>
@@ -89,6 +89,8 @@ function VideoCall({ ...rest }) {
   }
 }
 
-VideoCall.propTypes = {};
+// VideoCall.propTypes = {
+
+// };
 
 export default VideoCall;

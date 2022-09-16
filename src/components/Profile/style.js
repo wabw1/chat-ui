@@ -71,7 +71,9 @@ const StyledProfile = styled.div`
   border: 1px solid ${({ theme }) => theme.greyBox};
   /* box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2); */
 
-  display: ${({ showAll }) => (showAll ? "grid" : "none")};
+  /* 这行记得删掉，因为组件参数里已经没有showAll这个状态了 */
+  /* display: ${({ showAll }) => (showAll ? "grid" : "none")};   */
+  display: grid;
   align-content: start;
   justify-content: center;
   justify-items: center;

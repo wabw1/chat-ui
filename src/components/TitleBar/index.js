@@ -32,7 +32,12 @@ const Content = (
   </>
 );
 
-function TitleBar({ onAvatarClick, status = "offline", ...rest }) {
+function TitleBar({
+  onAvatarClick,
+  onVideoClick,
+  status = "offline",
+  ...rest
+}) {
   // 使用主题里的颜色
   // const theme = useTheme();
   return (
@@ -54,7 +59,7 @@ function TitleBar({ onAvatarClick, status = "offline", ...rest }) {
       </Title>
       <Actions>
         <Icon icon={Call} opacity={0.5} />
-        <Icon icon={Camera} opacity={0.5} />
+        <Icon icon={Camera} opacity={0.5} onClick={onVideoClick} />
         <Dropdown content={Content}>
           <Icon icon={Options} opacity={0.5} />
         </Dropdown>

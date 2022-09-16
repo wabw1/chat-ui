@@ -15,6 +15,7 @@ const CloseIcon = styled(Icon)`
   grid-area: 2/3/5/4;
   margin-top: 10px;
   z-index: 10;
+  cursor: pointer;
 `;
 
 // 头像部分容器
