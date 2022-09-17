@@ -5,10 +5,12 @@ import StyledContactList, { Contacts } from "./style";
 import FilterList from "components/FilterList";
 import ContactCard from "components/ContactCard";
 
-import face from "assets/images/face-female-2.jpg";
 // 引入spring
 import { animated } from "react-spring";
 import useStaggeredList from "hooks/useStaggeredList";
+
+// 导入数据
+import contactsData from "data/contacts";
 
 function ContactList({ ...rest }) {
   const trailAnimes = useStaggeredList(10);
@@ -20,14 +22,11 @@ function ContactList({ ...rest }) {
         actionLabel="添加好友"
       >
         <Contacts>
-          {new Array(10).fill(0).map((val, id) => (
-            <animated.div key={id} style={trailAnimes[id]}>
+          {contactsData.map((contact, id) => (
+            <animated.div key={contact.id} style={trailAnimes[id]}>
               <ContactCard
-                key={id}
-                avatarSrc={face}
-                status="online"
-                name={`联系人 ${id}`}
-                intro="this is the introduction"
+                key={contact.id}
+                contact={contact} //整个对象传进去，下层解构
               />
             </animated.div>
           ))}

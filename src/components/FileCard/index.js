@@ -35,7 +35,7 @@ const Icons = {
 function FileCard({ icon, name, size, time, ...rest }) {
   return (
     <StyledFileCard {...rest}>
-      <FileIcon icon={Icons.zip} />
+      <FileIcon icon={Icons[icon]} />
       <FileName>{name}</FileName>
       <FileSize>{size}</FileSize>
       <Options content={<PopoverContent />}>

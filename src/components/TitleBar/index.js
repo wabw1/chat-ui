@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import StyledTitleBar, { Actions, Title } from "./style";
 
-import face from "assets/images/face-female-2.jpg";
+import face from "assets/images/face4.jpg";
 import { ReactComponent as Call } from "assets/icons/call.svg";
 import { ReactComponent as Camera } from "assets/icons/camera.svg";
 import { ReactComponent as Options } from "assets/icons/options.svg";

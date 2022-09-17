@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import StyledContactCard, { Intro, Name } from "./style";
 import Avatar from "components/Avatar";
 
-function ContactCard({ children, avatarSrc, status, name, intro, ...rest }) {
+// 参数替换成contact对象，解构
+function ContactCard({ contact, ...rest }) {
   return (
     <StyledContactCard {...rest}>
-      <Avatar src={avatarSrc} status={status} />
-      <Name>{name}</Name>
-      <Intro>{intro}</Intro>
-      {children}
+      <Avatar src={contact.avatar} status={contact.status} />
+      <Name>{contact.name}</Name>
+      <Intro>{contact.intro}</Intro>
     </StyledContactCard>
   );
 }

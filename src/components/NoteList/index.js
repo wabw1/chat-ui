@@ -5,11 +5,11 @@ import StyledNoteList, { Notes } from "./style";
 import FilterList from "components/FilterList";
 import NoteCard from "components/NoteCard";
 
-import p from "assets/images/photo1.jpg";
-
 // 引入spring
 import { animated } from "react-spring";
 import useStaggeredList from "hooks/useStaggeredList";
+
+import notesData from "data/notes";
 
 function NoteList({ ...rest }) {
   const trailAnimes = useStaggeredList(10);
@@ -21,14 +21,14 @@ function NoteList({ ...rest }) {
         actionLabel="添加笔记"
       >
         <Notes>
-          {new Array(10).fill(0).map((val, idx) => (
-            <animated.div key={idx} style={trailAnimes[idx]}>
+          {notesData.map((note, idx) => (
+            <animated.div key={note.id} style={trailAnimes[idx]}>
               <NoteCard
-                key={idx}
-                imgSrc={p}
-                name="笔记标题"
-                abs="这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记"
-                time="上午12:04"
+                key={note.id}
+                imgSrc={note.image}
+                name={note.title}
+                abs={note.excerpt}
+                time={note.publishedAt}
               />
             </animated.div>
           ))}

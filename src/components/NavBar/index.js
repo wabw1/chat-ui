@@ -6,7 +6,7 @@ import StyledNavBar, { MenuIcon, MenuItems, StyledMenuItem } from "./style"; // 
 import Badge from "components/Badge";
 import Avatar from "components/Avatar";
 
-import profileImage from "assets/images/face-female-1.jpg"; //导入头像
+import profileImage from "assets/images/face1.jpg"; //导入头像
 
 // 导入fas图标
 import {

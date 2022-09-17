@@ -28,7 +28,7 @@ import Seperator from "components/Seperator";
 import Text from "components/Text";
 
 //导入images
-import face from "assets/images/face-female-1.jpg"; //引入头像
+import face from "assets/images/face1.jpg"; //引入头像
 import p1 from "assets/images/photo1.jpg";
 import p2 from "assets/images/photo2.jpg";
 import p3 from "assets/images/photo3.jpg";

@@ -14,7 +14,7 @@ import Button from "components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-import face from "assets/images/face-female-2.jpg";
+import face from "assets/images/face2.jpg";
 
 import "styled-components/macro"; // 属性用css
 import InputText from "components/Input/InputText";

@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 
 import StyledMessageList, { ChatList } from "./style";
 import MessageCard from "components/MessageCard";
-import face1 from "assets/images/face-female-1.jpg";
-
 import FilterList from "components/FilterList";
 
 // 引入spring
 import { animated } from "react-spring";
 import useStaggeredList from "hooks/useStaggeredList";
+
+// 导入数据
+import messageData from "data/messages";
 
 // 使用抽离的FilterList重写MessageList
 function MessageList({ ...rest }) {
@@ -22,19 +23,19 @@ function MessageList({ ...rest }) {
         actionLabel="创建会话"
       />
       <ChatList>
-        {[1, 2, 3, 4, 5, 6].map((val, idx) => (
-          <animated.div key={idx} style={trailAnimes[idx]}>
+        {messageData.map((message, idx) => (
+          <animated.div key={message.id} style={trailAnimes[idx]}>
             <MessageCard
-              key={idx}
-              avatarSrc={face1}
-              avatarStatus="online"
-              name="Cindy"
-              statusText="在线"
-              time="三小时前"
-              message="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
-              unreadCount={2}
+              key={message.id}
+              avatarSrc={message.avatarSrc}
+              avatarStatus={message.avatarStatus}
+              name={message.name}
+              statusText={message.statusText}
+              time={message.time}
+              message={message.message}
+              unreadCount={message.unreadCount}
               active={idx === 3}
-              replied={idx % 3 === 0}
+              replied={message.replied}
             />
           </animated.div>
         ))}

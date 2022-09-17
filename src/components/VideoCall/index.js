@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import videoBg from "assets/images/photo2.jpg"; // 这里以背景图代替视频
-import face from "assets/images/face-female-2.jpg";
+import face from "assets/images/face2.jpg";
 import Avatar from "components/Avatar";
 import Paragraph from "components/Paragraph";
 

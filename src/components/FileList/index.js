@@ -8,6 +8,8 @@ import FileCard from "components/FileCard";
 import { animated } from "react-spring";
 import useStaggeredList from "hooks/useStaggeredList";
 
+import filesData from "data/files";
+
 function FileList({ ...rest }) {
   const trailAnimes = useStaggeredList(10);
   return (
@@ -18,13 +20,14 @@ function FileList({ ...rest }) {
         actionLabel="添加文件"
       >
         <Files>
-          {new Array(10).fill(0).map((val, idx) => (
-            <animated.div key={idx} style={trailAnimes[idx]}>
+          {filesData.map((file, idx) => (
+            <animated.div key={file.id} style={trailAnimes[idx]}>
               <FileCard
-                key={idx}
-                name="Soucecode.zip"
-                size="14.7M"
-                time="2022年9月10日"
+                key={file.id}
+                name={file.name}
+                size={file.size}
+                time={file.updatedAt}
+                icon={file.type}
               />
             </animated.div>
           ))}

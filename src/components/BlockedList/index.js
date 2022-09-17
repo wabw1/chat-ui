@@ -18,21 +18,18 @@ import { ReactComponent as CloseCircle } from "assets/icons/closeCircle.svg";
 import Text from "components/Text";
 import Icon from "components/Icon";
 
-import face from "assets/images/face-female-3.jpg";
 import { useNavigate } from "react-router-dom"; //代替useHistory
+
+//导入数据
+import blockedData from "data/blocked";
 
 // 页面组件（组装的）一般都没有children
 function BlockedList({ ...rest }) {
   // 编程式控制路由
   const navigate = useNavigate(); //
-  // 控制FriendList的状态数组 (初始8个)
-  const initFriends = [];
-  for (let i = 0; i < 8; i++) {
-    initFriends.push({
-      id: i,
-      name: `好友${i}`,
-    });
-  }
+
+  const initFriends = blockedData; //导入初始列表
+
   const [friends, setFriends] = useState(initFriends); //不能用idx作为key
   // 删除函数，删掉第idx项
   const onHandleDelete = (idx) => {
@@ -56,7 +53,7 @@ function BlockedList({ ...rest }) {
             key={friend.id}
             onClick={() => onHandleDelete(friend.id)}
           >
-            <BlockedAvatar src={face} size="105px" />
+            <BlockedAvatar src={friend.avatar} size="105px" />
             <CloseIcon width={46} height={51} icon={CloseCircle} />
             <BlockedName>{friend.name}</BlockedName>
           </ClosableAvatar>
