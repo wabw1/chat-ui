@@ -36,12 +36,14 @@ function TitleBar({
   onAvatarClick,
   onVideoClick,
   status = "offline",
+  animeProps,
+  style, // 这个是什么属性啊？
   ...rest
 }) {
   // 使用主题里的颜色
   // const theme = useTheme();
   return (
-    <StyledTitleBar {...rest}>
+    <StyledTitleBar style={{ ...style, ...animeProps }} {...rest}>
       <Avatar onClick={onAvatarClick} src={face} status={status} />
       <Title>
         <Paragraph size="large">Guile</Paragraph>

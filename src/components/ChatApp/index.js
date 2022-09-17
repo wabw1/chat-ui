@@ -8,7 +8,7 @@ import MessageList from "components/MessageList";
 import Profile from "components/Profile";
 
 // 导入路由Route  Routes替代了Switch
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 // import { Switch } from "react-router";
 
 import ContactList from "components/ContactList";
@@ -19,12 +19,29 @@ import BlockedList from "components/BlockedList";
 import Settings from "components/Settings";
 import VideoCall from "components/VideoCall";
 
+import { animated, useTransition } from "react-spring";
+
 function ChatApp({ ...rest }) {
   // 控制滑动抽屉是否显示
   const [showDrawer, setShowDrawer] = useState(false);
   // 控制视频通话是否显示
   const [showVideo, setShowVideo] = useState(false);
 
+  const loc = useLocation(); //获取当前路径
+  const transitions = useTransition(loc, {
+    from: {
+      opacity: 0,
+      transform: "translate3d(-100px,0,0)",
+    },
+    enter: {
+      opacity: 1,
+      transform: "translate3d(-100px,0,0)",
+    },
+    leave: {
+      opacity: 0,
+      transform: "translate3d(-100px,0,1)",
+    },
+  });
   return (
     <StyledChatApp {...rest}>
       <Nav>
@@ -34,14 +51,18 @@ function ChatApp({ ...rest }) {
       <SideBar>
         {/* exact为精确匹配，路径完全匹配才会把Children传进去 */}
         {/* 不用Switch了, v6换成Routes, 起到一样的作用 */}
-        <Routes>
-          <Route path="/" element={<MessageList />} />
-          <Route path="/contacts" element={<ContactList />} />
-          <Route path="/files" element={<FileList />} />
-          <Route path="/notes" element={<NoteList />} />
-          <Route path="/more" element={<div></div>} /> {/*  这里先整个空白 */}
-          <Route path="/settings/*" element={<EditProfile />} />
-        </Routes>
+        {transitions(({ item, props }) => (
+          <animated.div style={props}>
+            <Routes location={item}>
+              <Route path="/" element={<MessageList />} />
+              <Route path="/contacts" element={<ContactList />} />
+              <Route path="/files" element={<FileList />} />
+              <Route path="/notes" element={<NoteList />} />
+              <Route path="/more" element={<div></div>} />
+              <Route path="/settings/*" element={<EditProfile />} />
+            </Routes>
+          </animated.div>
+        ))}
       </SideBar>
 
       <Content>

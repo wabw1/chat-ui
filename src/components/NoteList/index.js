@@ -7,7 +7,12 @@ import NoteCard from "components/NoteCard";
 
 import p from "assets/images/photo1.jpg";
 
+// 引入spring
+import { animated } from "react-spring";
+import useStaggeredList from "hooks/useStaggeredList";
+
 function NoteList({ ...rest }) {
+  const trailAnimes = useStaggeredList(10);
   return (
     <StyledNoteList {...rest}>
       <FilterList
@@ -17,13 +22,15 @@ function NoteList({ ...rest }) {
       >
         <Notes>
           {new Array(10).fill(0).map((val, idx) => (
-            <NoteCard
-              key={idx}
-              imgSrc={p}
-              name="笔记标题"
-              abs="这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记"
-              time="上午12:04"
-            />
+            <animated.div key={idx} style={trailAnimes[idx]}>
+              <NoteCard
+                key={idx}
+                imgSrc={p}
+                name="笔记标题"
+                abs="这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记这是一篇笔记"
+                time="上午12:04"
+              />
+            </animated.div>
           ))}
         </Notes>
       </FilterList>

@@ -4,8 +4,12 @@ import PropTypes from "prop-types";
 import StyledFileList, { Files } from "./style";
 import FilterList from "components/FilterList";
 import FileCard from "components/FileCard";
+// 引入spring
+import { animated } from "react-spring";
+import useStaggeredList from "hooks/useStaggeredList";
 
 function FileList({ ...rest }) {
+  const trailAnimes = useStaggeredList(10);
   return (
     <StyledFileList {...rest}>
       <FilterList
@@ -15,12 +19,14 @@ function FileList({ ...rest }) {
       >
         <Files>
           {new Array(10).fill(0).map((val, idx) => (
-            <FileCard
-              key={idx}
-              name="Soucecode.zip"
-              size="14.7M"
-              time="2022年9月10日"
-            />
+            <animated.div key={idx} style={trailAnimes[idx]}>
+              <FileCard
+                key={idx}
+                name="Soucecode.zip"
+                size="14.7M"
+                time="2022年9月10日"
+              />
+            </animated.div>
           ))}
         </Files>
       </FilterList>

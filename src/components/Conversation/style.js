@@ -1,8 +1,8 @@
 import ChatBubble from "components/ChatBubble";
 import styled from "styled-components";
-
+import { animated } from "react-spring";
 // 自定义conversations容器
-const Conversations = styled.div`
+const Conversations = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: start; //

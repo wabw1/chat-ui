@@ -3,16 +3,30 @@ import styled, { css } from "styled-components";
 // nav标签渲染
 const Nav = styled.nav`
   flex-shrink: 0; // 禁止缩小
+
+  // 添加动画样式
+  position: relative;
+  z-index: 100;
 `;
 
 const SideBar = styled.aside`
-  min-width: 350px;
+  min-width: 344px;
   max-width: 448px;
   height: 100vh;
   flex: 1;
   background: ${({ theme }) => theme.gradientGrey};
-  padding: 10px;
+  /* padding: 20px; */
   overflow-y: auto;
+  padding: 15px;
+
+  // 动画设置样式
+  position: relative;
+  z-index: 50;
+  > div {
+    will-change: transform, opacity;
+    position: absolute;
+    width: 94%;
+  }
 `;
 
 const Content = styled.main`
@@ -23,10 +37,15 @@ const Content = styled.main`
 const Drawer = styled.div`
   max-width: 310px;
   width: 0; //默认为0 ，show==true为310
+
+  // 设置动画
+  transform: translateX(200px);
+  transition: 0.4s;
   ${({ show }) =>
     show &&
     css`
-      width: 310px;
+      width: initial; // ????????? initial 是什么值
+      transform: translateX(0px);
     `}
 `;
 

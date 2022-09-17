@@ -30,12 +30,12 @@ function PopoverContent(props) {
   );
 }
 
-function Footer({ ...rest }) {
+function Footer({ animeProps, style, ...rest }) {
   // 无popover时候，smile为灰色 - 通过onVisible和onHide设置回调
   const [emojiIconActive, setEmojiIconActive] = useState(false);
   const theme = useTheme();
   return (
-    <StyledFooter {...rest}>
+    <StyledFooter style={{ ...animeProps, ...style }} {...rest}>
       <Input
         placeholder="想说的话..."
         prefix={<Icon icon={ClipIcon} />}

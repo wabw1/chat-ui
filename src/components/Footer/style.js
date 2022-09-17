@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { animated } from "react-spring";
+
 // suffix Icon的容器
 const IconContainer = styled.div`
   display: flex;
@@ -19,7 +21,8 @@ const StyledPopoverContent = styled.div`
   }
 `;
 
-const StyledFooter = styled.footer`
+//添加动画 animated.footer
+const StyledFooter = styled(animated.footer)`
   padding: 12px 30px;
   width: 100%;
 `; //符合html语义化规则

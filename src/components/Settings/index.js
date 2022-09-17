@@ -16,35 +16,49 @@ import Paragraph from "components/Paragraph";
 import Seperator from "components/Seperator";
 // 导入路由Link
 import { Link } from "react-router-dom";
+// 导入动画
+import { useSpring, animated } from "react-spring";
 
 import "styled-components/macro";
 
 function Settings({ ...rest }) {
+  const animeProps = useSpring({
+    from: { opacity: 0, transform: "translate3d(200px,0px,0px)" },
+    opacity: 1,
+    transform: "translate3d(0px,0px,0px)",
+    config: {
+      tension: 140,
+    },
+    delay: 300,
+  });
+
   return (
     <StyledSettings {...rest}>
-      <SettingsGroup groupName="隐私设置">
-        <SettingsItem label="添加好友时需验证" />
-        <SettingsItem
-          label="推荐通讯录"
-          description="通讯录好友的description...通讯录好友的description"
-        />
-        <SettingsItem label="只能手机号找到我" />
-      </SettingsGroup>
-      <SettingsGroup groupName="通知设置">
-        <SettingsItem label="新消息通知" />
-        <SettingsItem label="语音提醒" />
-        <SettingsItem label="通知详情" />
-        <SettingsItem label="声音" />
-        <Link
-          to="/settings/blocked"
-          css={`
-            text-decoration: none;
-            color: inherit;
-          `}
-        >
-          <SettingsItem label="显示mute的好友" type="menu" />
-        </Link>
-      </SettingsGroup>
+      <animated.div style={animeProps}>
+        <SettingsGroup groupName="隐私设置">
+          <SettingsItem label="添加好友时需验证" />
+          <SettingsItem
+            label="推荐通讯录"
+            description="通讯录好友的description...通讯录好友的description"
+          />
+          <SettingsItem label="只能手机号找到我" />
+        </SettingsGroup>
+        <SettingsGroup groupName="通知设置">
+          <SettingsItem label="新消息通知" />
+          <SettingsItem label="语音提醒" />
+          <SettingsItem label="通知详情" />
+          <SettingsItem label="声音" />
+          <Link
+            to="/settings/blocked"
+            css={`
+              text-decoration: none;
+              color: inherit;
+            `}
+          >
+            <SettingsItem label="显示mute的好友" type="menu" />
+          </Link>
+        </SettingsGroup>
+      </animated.div>
     </StyledSettings>
   );
 }
