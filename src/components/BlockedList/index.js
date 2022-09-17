@@ -18,7 +18,7 @@ import { ReactComponent as CloseCircle } from "assets/icons/closeCircle.svg";
 import Text from "components/Text";
 import Icon from "components/Icon";
 
-import face from "assets/images/face-female-1.jpg";
+import face from "assets/images/face-female-3.jpg";
 import { useNavigate } from "react-router-dom"; //代替useHistory
 
 // 页面组件（组装的）一般都没有children

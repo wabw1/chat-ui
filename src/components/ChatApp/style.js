@@ -12,7 +12,7 @@ const SideBar = styled.aside`
   flex: 1;
   background: ${({ theme }) => theme.gradientGrey};
   padding: 10px;
-  overflow-y: hidden;
+  overflow-y: auto;
 `;
 
 const Content = styled.main`
