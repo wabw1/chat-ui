@@ -4,10 +4,11 @@ import StyledAvatar, { StatusIcon } from "components/Avatar/style"; // 修改组
 import styled from "styled-components";
 import { activeBar } from "utils/mixins";
 
+import { NavLink } from "react-router-dom";
+
 // 带样式的单个图标 Icon
 const MenuIcon = styled(FontAwesomeIcon)`
-  /* font-size: ${({ fontSize }) =>
-    `${fontSize}`};  // 自定义FontAwesomeIcon的size */
+  /* font-size: ${({ fontSize }) => `${fontSize}`};  // 自定义FontAwesomeIcon的size */
   color: white;
   font-size: 24px;
   opacity: ${({ active }) => (active ? 1 : 0.3)};
@@ -29,14 +30,20 @@ const StyledMenuItem = styled.div`
 
     // 调用activeBar()
     // 方法1. 不传参，默认选中 , 传0时 barWidth和阴影为0
-    /* ${({ active }) =>
-      active ? activeBar() : activeBar({ barWidth: 0, shadowWidth: 0 })} */
+    /* ${({ active }) => (active ? activeBar() : activeBar({ barWidth: 0, shadowWidth: 0 }))} */
 
     // 方法2. 推荐下面的方式，因为方便设置动画  (active==false)
     ${activeBar()}
     ${({ active }) => (active ? "" : `&::before,&::after{height: 0;}`)}
+    
+    //给下面的NavLink添加active类的样式（但解决不了第一个link恒为active)s
+    &.active {
+      ${activeBar()}
+    }
+
     // 伪类hover
-    &:hover, &:active {
+    &:hover,
+    &:active {
       // 伪元素before/after
       ::before,
       ::after {

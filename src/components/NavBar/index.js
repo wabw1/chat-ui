@@ -9,17 +9,10 @@ import Avatar from "components/Avatar";
 import profileImage from "assets/images/face1.jpg"; //导入头像
 
 // 导入fas图标
-import {
-  faCog,
-  faCommentDots,
-  faEllipsisH,
-  faFolder,
-  faStickyNote,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCog, faCommentDots, faEllipsisH, faFolder, faStickyNote, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 // 导入路由相关模块  使用NavLink替代Link
-import { matchPath, Link, useLocation } from "react-router-dom";
+import { matchPath, NavLink, useLocation } from "react-router-dom";
 
 // import css/macro
 import "styled-components/macro";
@@ -63,12 +56,11 @@ function MenuItem({ to = "#", icon, showBadge, ...rest }) {
   // styled-components里 传递属性如果不是参数的话, 前面需要加 $
   return (
     <StyledMenuItem $active={active} {...rest}>
-      {/* eslint-disable-next-line  */}
-      <Link to={to}>
+      <NavLink to={to}>
         <Badge show={showBadge}>
           <MenuIcon icon={icon} $active={active} {...rest} />
         </Badge>
-      </Link>
+      </NavLink>
     </StyledMenuItem>
   );
 }
