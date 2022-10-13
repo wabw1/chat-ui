@@ -22,7 +22,7 @@ function NavBar({ navSize = "75px", ...rest }) {
     <StyledNavBar navSize={navSize} {...rest}>
       <Avatar src={profileImage} status="online" />
       <MenuItems>
-        <MenuItem to="/" icon={faCommentDots} showBadge={true} />
+        <MenuItem to="/chat-ui" icon={faCommentDots} showBadge={true} />
         <MenuItem to="/contacts" icon={faUsers} />
         <MenuItem to="/files" icon={faFolder} />
         <MenuItem to="/notes" icon={faStickyNote} />

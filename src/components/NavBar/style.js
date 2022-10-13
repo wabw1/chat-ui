@@ -3,9 +3,6 @@ import StyledAvatar, { StatusIcon } from "components/Avatar/style"; // 修改组
 
 import styled from "styled-components";
 import { activeBar } from "utils/mixins";
-
-import { NavLink } from "react-router-dom";
-
 // 带样式的单个图标 Icon
 const MenuIcon = styled(FontAwesomeIcon)`
   /* font-size: ${({ fontSize }) => `${fontSize}`};  // 自定义FontAwesomeIcon的size */

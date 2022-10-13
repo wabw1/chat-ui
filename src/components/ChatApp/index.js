@@ -55,6 +55,7 @@ function ChatApp({ ...rest }) {
           <animated.div style={props}>
             <Routes location={item}>
               <Route path="/" element={<MessageList />} />
+              <Route path="/chat-ui" element={<MessageList />} />
               <Route path="/contacts" element={<ContactList />} />
               <Route path="/files" element={<FileList />} />
               <Route path="/notes" element={<NoteList />} />
@@ -73,12 +74,7 @@ function ChatApp({ ...rest }) {
           <Route
             path="/*"
             // exact={false}
-            element={
-              <Conversation
-                onAvatarClick={() => setShowDrawer(true)}
-                onVideoClick={() => setShowVideo(true)}
-              />
-            }
+            element={<Conversation onAvatarClick={() => setShowDrawer(true)} onVideoClick={() => setShowVideo(true)} />}
           />
           <Route path="/settings" element={<Settings />} />
           <Route path="settings/blocked" element={<BlockedList />} />
